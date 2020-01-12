@@ -1,0 +1,18 @@
+{
+    "japan" : {
+        "hasAdvisory" : 1,
+        "numberOfAdvisory" : 1,
+        "advisorys" :  [
+            {"advisory": "Japan is experiencing an outbreak of rubella. The highest number of cases have been reported in Tokyo, Chiba, Kanagawa, and Osaka prefectures."}   
+        ]
+    },
+    "congo" : {
+        "hasAdvisory" : 1,
+        "numberOfAdvisory" : 2,
+        "advisorys" :  [
+            {"advisory": "The ongoing outbreak of Ebola virus disease (EVD) in the Democratic Republic of Congo (DRC) was originally reported on August 1, 2018. EVD has been reported in both cities and rural areas in North Kivu, South Kivu and Ituri provinces, located in the northeastern part of the country."},
+            {"advisory": "The World Health Organization (WHO) declared the international spread of poliovirus a public health emergency of international concern (PHEIC) in May 2014, and issued temporary recommendations to reduce the risk of further spread of the disease. Since then, the International Health Regulations Emergency Committee meets every three months to review the situation."}   
+        ]
+    
+    }
+}

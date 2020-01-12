@@ -36,7 +36,12 @@ export default class AdvisoryBoard extends Component{
     }
   }
 
-  async getData() {
+  // aysnc getHealthAdvisory() {
+
+  //   return 'test';
+  // }
+
+  async getTravelAdvisory() {
     // let locationURL = advisoryBaseURL + '/congo';
     // console.log('url of api call is ', locationURL)
     let advisory = await axios.get('http://localhost:5000/travelAdvisory/congo')
