@@ -1,12 +1,19 @@
 .redTitle {
     color: #FF624D;
     text-align: left;
+    max-width: calc(100%-50px);
+}
+
+.mbsc-comp {
+    width: 100%;
+    margin: 0;
 }
 
 .advisory {
-    width: 50%;
-    margin-left: 25%;
-    padding-left: 50px;
+    max-width: 70%;
+    margin-left: 10vw;
+    padding-left: 35px;
+    margin-top: 30px;
 }
 
 .learnMore {
@@ -31,11 +38,60 @@
     margin-left: -40px;
 }
 
-.outside {
-    width: 60%;
-    margin-left: 20%;
+.icon-nav {
+    width: 30px;
+    height: 30px;
+    display: inline;
+    float: left;
 }
 
-.MuiPaper-rounded {
-    border: 2px solid #FF624D !important;
+.outside {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+.landingCont {
+    margin-top: 40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.icon-dash {
+    /* width: 100px;
+    height: 100px;
+    margin-left: -35%;
+    margin-top: 40px; */
+
+    width: 100px;
+    height: 100px;
+}
+
+.landingText {
+    width:150px;
+    text-align:left;
+}
+
+.advisory.MuiPaper-rounded {
+    border: 2px solid #FF624D ;
+}
+
+.navWelcome {
+    color: #008EFF;
+}
+
+p {
+    color: #533736;
+}
+
+.back {
+    color: white;
+}
+
+.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
+    background-color: #008EFF;
+}
+
+.Nav-text {
+    margin-left: 25px;
 }

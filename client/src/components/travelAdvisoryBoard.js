@@ -53,7 +53,7 @@ export default class AdvisoryBoard extends Component{
   }
 
   async componentDidMount() {
-    const test = await this.getData();
+    const test = await this.getTravelAdvisory();
   }
 
   render() {
