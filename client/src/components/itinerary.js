@@ -8,7 +8,7 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import { CardContent } from '@material-ui/core';
 import ItinerarySplit from './itinerarySplit'
-import '../css/itinerary.css';
+import '../css/itinerarySplit.css';
 
 class Itinerary extends Component {
     constructor(props) {
@@ -85,7 +85,7 @@ class Itinerary extends Component {
         return (
             this.state.itinerary.map((element) => {
                 return (
-                    <Card>
+                    <Card className="categories">
                         <CardContent>
                             <Typography variant="h5" component="h2" align="left">
                                 {element.category}
@@ -142,10 +142,11 @@ class Itinerary extends Component {
 
     render() {
         return (
-            <div className="itinerary">
+            <div className="moneyCard">
                 <ItinerarySplit/>
                 {this.renderItinerary()}
-                <AppBar position="static" color="primary">
+                <div><br></br><br></br></div>
+                <AppBar className="totalBar" color="primary">
                     <ToolBar>
                         <Grid container spacing={2}>
                             <Grid item xs={10} align="left">

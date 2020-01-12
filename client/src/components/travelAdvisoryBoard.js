@@ -32,7 +32,8 @@ export default class AdvisoryBoard extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      TravelAdvisory: ''
+      TravelAdvisory: '',
+      Vaccine: '',
     }
   }
 
@@ -52,23 +53,47 @@ export default class AdvisoryBoard extends Component{
         });
   }
 
+  async getVaccine() {
+    let vaccine = await axios.get('http://localhost:5000/healthAdvisory/:location')
+        .then((response)=> {
+          this.setState({Vaccine: response.data})
+        }).catch((error) => {
+            console.log(error)
+        });
+  }
+
   async componentDidMount() {
-    const test = await this.getData();
+    const test = await this.getTravelAdvisory();
+    const test2 = await this.getVaccine();
   }
 
   render() {
         return (
-    <Card className='advisory' variant="outlined">
-    <CardContent>
-    <img className='icon' src={warning}></img>
-      <div>
-        <h1 className='redTitle left'> TRAVEL ADVISORY </h1>
-      </div>
-      <Typography className='advisory-msg left'>
-        {this.state.TravelAdvisory}
-      </Typography>
-      <h3 className='left learnMore'> <a  href="https://travel.gc.ca/travelling/advisories?wbdisable=true">  LEARN MORE </a></h3>
-    </CardContent>
-  </Card>
+          <div>
+            <Card className='advisory' variant="outlined">
+              <CardContent>
+                <img className='icon' src={warning}></img>
+                <div>
+                  <h1 className='redTitle left'> TRAVEL ADVISORY </h1>
+                </div>
+                <Typography className='advisory-msg left'>
+                  {this.state.TravelAdvisory}
+                </Typography>
+                <h3 className='left learnMore'> <a  target="_blank" href="https://travel.gc.ca/travelling/advisories?wbdisable=true">  LEARN MORE </a></h3>
+              </CardContent>
+            </Card>
+            <Card className='advisory' variant="outlined">
+              <CardContent>
+                <img className='icon' src={warning}></img>
+                <div>
+                  <h1 className='redTitle left'> VACCINE ADVISORY </h1>
+                </div>
+                <Typography className='advisory-msg left'>
+                  {this.state.Vaccine}
+                </Typography>
+                <h3 className='left learnMore'> <a  target="_blank" href="https://www.canada.ca/en/public-health/services/publications/healthy-living/canadian-immunization-guide-part-3-vaccination-specific-populations.html">  LEARN MORE </a></h3>
+              </CardContent>
+            </Card>
+          </div>
   )}
 }
