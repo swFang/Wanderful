@@ -15,13 +15,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import buddyImg from '../find buddy.png';
 import InfoImg from '../flag.png';
 import itinImg from  '../itinerary.png';
-import costImg from '../budget.png';
+import ExpensesImg from '../budget.png';
 import back from '../82773560_1023084961383144_144685868970409984_n.png';
 import dash from '../dashboard.png';
 import CalendarContainer from './CalendarContainer';
 
 const axios = require('axios');
-const buttons = ['Information', 'Itinerary', 'Cost', 'FindMyBuddy'];
+const buttons = ['Information', 'Itinerary', 'Expenses', 'FindMyBuddy'];
 
 export default class LandingPage extends Component{
     constructor(props) {
@@ -29,7 +29,7 @@ export default class LandingPage extends Component{
       this.state = {
         Information: false,
         Itinerary: false, 
-        Cost: false,
+        Expenses: false,
         FindMyBuddy: false
       };
     }
@@ -40,8 +40,8 @@ export default class LandingPage extends Component{
             title = 'Travel Advisory';
         } else if (this.state.Itinerary) {
             title = 'Itinerary';
-        } else if (this.state.Cost) {
-            title = 'Budget';
+        } else if (this.state.Expenses) {
+            title = 'Expenses';
         } else if (this.state.FindMyBuddy) {
             title = 'Find My Buddy';
         }
@@ -55,7 +55,7 @@ export default class LandingPage extends Component{
                         this.setState({ 
                             Information: false,
                             Itinerary: false, 
-                            Cost: false,
+                            Expenses: false,
                             FindMyBuddy: false,
                         })
                     }}>
@@ -73,8 +73,8 @@ export default class LandingPage extends Component{
             return InfoImg;
         } else if (btn == 'Itinerary') {
             return itinImg;
-        } else if (btn =='Cost') {
-            return costImg;
+        } else if (btn =='Expenses') {
+            return ExpensesImg;
         } else if (btn == 'FindMyBuddy') {
             return buddyImg;
         }
@@ -102,7 +102,7 @@ export default class LandingPage extends Component{
     }
 
     render() {
-        if(!this.state.Information && !this.state.Itinerary && !this.state.Cost && !this.state.FindMyBuddy) {
+        if(!this.state.Information && !this.state.Itinerary && !this.state.Expenses && !this.state.FindMyBuddy) {
             return (
                 <div>
                     {this.renderNavBar()}
@@ -123,7 +123,7 @@ export default class LandingPage extends Component{
                 <div>
                     {this.renderNavBar()}
                     {this.state.Information && <AdvisoryBoard></AdvisoryBoard>}
-                    {this.state.Cost && <Itinerary></Itinerary> }
+                    {this.state.Expenses && <Itinerary></Itinerary> }
                     {this.state.Itinerary && <CalendarContainer></CalendarContainer> }
                     {this.state.FindMyBuddy && <MapContainer></MapContainer> }
                 </div>
