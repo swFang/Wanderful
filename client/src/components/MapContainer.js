@@ -5,12 +5,51 @@ import gina from '../img/Gina.png';
 import holt from '../img/Holt.png';
 import jake from '../img/Jake.png';
 import you from '../img/you.png';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 
 
 
 
 export class MapContainer extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { showBar: false };
+  }
+  toggleDrawer = function () {
+    this.setState({ showBar: !this.state.showBar })
+  };
+
+
+
   render() {
+    const sideList = side => (
+      <div>
+        <ListItem >
+           <img src={gina}/>
+          <ListItemText primary="Gina Linetti" secondary="Near Wesbrook Mall" />
+        </ListItem>
+        <Divider />
+        <ListItem >
+        <img src={holt}/>
+          <ListItemText primary="Raymond Holt" secondary="Near Dalhousie Rd" />
+        </ListItem>
+        <Divider />
+        <ListItem >
+        <img src={jake}/>
+          <ListItemText primary="Jake Peralta" secondary="Near Oyama Ct"/>
+        </ListItem>
+      </div>
+    );
     return (
       <div className="mapContainer">
         <Map
@@ -22,19 +61,22 @@ export class MapContainer extends Component {
             lng: -123.245
           }}
         >
-          <Marker 
-          position={{ lat: 49.260, lng: -123.240 }}
-          icon={gina} title="Gina" />
-          <Marker 
-          position={{ lat: 49.261, lng: -123.238 }}
-          icon={jake} title="Jake" />
-          <Marker 
-          position={{ lat: 49.266, lng: -123.241 }}
-          icon={holt} title="Holt" />
-          <Marker 
-          position={{ lat: 49.263, lng: -123.245 }}
-          icon={you} />
+          <Marker
+            position={{ lat: 49.260, lng: -123.240 }}
+            icon={gina} title="Gina" onClick={this.toggleDrawer.bind(this)} />
+          <Marker
+            position={{ lat: 49.261, lng: -123.238 }}
+            icon={jake} title="Jake" onClick={this.toggleDrawer.bind(this)} />
+          <Marker
+            position={{ lat: 49.266, lng: -123.241 }}
+            icon={holt} title="Holt" onClick={this.toggleDrawer.bind(this)} />
+          <Marker
+            position={{ lat: 49.263, lng: -123.245 }}
+            icon={you} />
         </Map>
+        <Drawer anchor="bottom" open={this.state.showBar} onClose={this.toggleDrawer.bind(this)}>
+          {sideList('bottom')}
+        </Drawer>
       </div>
     );
   }
