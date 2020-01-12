@@ -2,7 +2,7 @@ import React, {Component } from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import './style.css';
-import MapContainer from '../MapContainer';
+import MapContainer from './MapContainer';
 import AdvisoryBoard from './travelAdvisoryBoard';
 import Profile from './profile';
 import AppBar from '@material-ui/core/AppBar';
