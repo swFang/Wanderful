@@ -6,4 +6,8 @@ module.exports = (app) => {
     });
 
     app.use (express.json());
+
+    app.get('/travelAdvisory', (req, res) => {
+        
+    })
 };
