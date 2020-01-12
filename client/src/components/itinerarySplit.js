@@ -6,8 +6,11 @@ import ToolBar from '@material-ui/core/ToolBar';
 import Grid from '@material-ui/core/Grid';
 import Tab from '@material-ui/core/Tab';
 import Card from '@material-ui/core/Card';
+import Box from '@material-ui/core/Box';
+import { borders } from '@material-ui/system';
 import Typography from '@material-ui/core/Typography';
 import { CardContent } from '@material-ui/core';
+import '../css/itinerarySplit.css';
 
 class ItinerarySplit extends Component {
     constructor(props) {
@@ -40,6 +43,7 @@ class ItinerarySplit extends Component {
     render() {
         return (
             <div>
+                <Box borderColor="primary.main" borderRadius="50%">hello</Box>
                 <Card>
                     <CardContent>
                         <Grid container spacing={2}>

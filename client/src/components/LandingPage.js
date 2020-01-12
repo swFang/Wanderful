@@ -5,6 +5,7 @@ import './style.css';
 import MapContainer from './MapContainer';
 import AdvisoryBoard from './travelAdvisoryBoard';
 import Profile from './profile';
+import Itinerary from './itinerary';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const axios = require('axios');
-const buttons = ['Information', 'Itinerary', 'Cost'];
+const buttons = ['Information', 'Itinerary', 'Cost', 'Profile'];
 
 export default class LandingPage extends Component{
     constructor(props) {
@@ -22,6 +23,7 @@ export default class LandingPage extends Component{
         Information: false,
         Itinerary: false, 
         Cost: false,
+        Profile: false
       };
     }
 
@@ -36,6 +38,7 @@ export default class LandingPage extends Component{
                             Information: false,
                             Itinerary: false, 
                             Cost: false,
+                            Profile: false,
                         })
                     }}>
                   <MenuIcon />
@@ -67,7 +70,7 @@ export default class LandingPage extends Component{
         );
     }
     render() {
-        if(!this.state.Information && !this.state.Itinerary && !this.state.Cost) {
+        if(!this.state.Information && !this.state.Itinerary && !this.state.Cost && !this.state.Profile) {
             return (
                 <div>
                     {this.renderNavBar()}
@@ -79,8 +82,9 @@ export default class LandingPage extends Component{
                 <div>
                     {this.renderNavBar()}
                     {this.state.Information && <AdvisoryBoard></AdvisoryBoard>}
-                    {this.state.Cost && <Profile></Profile>}
+                    {this.state.Cost && <Itinerary></Itinerary>}
                     {this.state.Itinerary && <MapContainer></MapContainer> }
+                    {this.state.Profile && <Profile></Profile>}
                 </div>
             );
         }
