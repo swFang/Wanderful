@@ -1,27 +1,15 @@
-// import React, { Component } from 'react';
-
-// class AdvisoryBoard extends Component {
-//     constructor(props) {
-//         super(props);
-//     }
-
-//     render() {
-//         return (
-//             <div>
-
-//             </div>
-//         );
-//     }
-// }
-
-// export default AdvisoryBoard;
-import React from 'react';
+import React, {Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import './style.css';
+import warning from '../warning.png';
+
+const axios = require('axios');
+//const advisoryBaseURL = 'http://localhost:5000/travelAdvisory';
 
 const useStyles = makeStyles({
   card: {
@@ -40,31 +28,42 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+export default class AdvisoryBoard extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      TravelAdvisory: ''
+    }
+  }
 
-  return (
-    <Card className={classes.card}>
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
+  async getData() {
+    // let locationURL = advisoryBaseURL + '/congo';
+    // console.log('url of api call is ', locationURL)
+    let advisory = await axios.get('http://localhost:5000/travelAdvisory/congo')
+        .then((response)=> {
+          this.setState({TravelAdvisory: response.data})
+        }).catch((error) => {
+            console.log(error)
+        });
+  }
+
+  async componentDidMount() {
+    const test = await this.getData();
+  }
+
+  render() {
+        return (
+    <Card className='advisory' variant="outlined">
+    <CardContent>
+    <img className='icon' src={warning}></img>
+      <div>
+        <h1 className='redTitle left'> TRAVEL ADVISORY </h1>
+      </div>
+      <Typography className='advisory-msg left'>
+        {this.state.TravelAdvisory}
+      </Typography>
+      <h3 className='left learnMore'> <a  href="https://travel.gc.ca/travelling/advisories?wbdisable=true">  LEARN MORE </a></h3>
+    </CardContent>
+  </Card>
+  )}
 }
