@@ -1,0 +1,90 @@
+[
+    {
+        "d": "1/12",
+        "text": "NwHacks 2020",
+        "color": "#37bbe4"
+    },
+    {
+        "d": "1/14",
+        "text": "Japan Trip tomorrow",
+        "color": "#37bbe4"
+    },
+    {
+        "start": "2020-01-15T15:00:00.000Z",
+        "end": "2020-01-15T16:00:00.000Z",
+        "text": "Check into hotel",
+        "color": "#f67944"
+    },
+    {
+        "start": "2020-01-15T20:00:00.000Z",
+        "end": "2020-01-15T22:00:00.000Z",
+        "text": "Sauna",
+        "color": "#de3d83"
+    },
+    {
+        "start": "2020-01-16T09:00:00.000Z",
+        "end": "2020-01-16T11:15:00.000Z",
+        "text": "Ramen",
+        "color": "#6e7f29"
+    },
+    {
+        "start": "2020-01-16T14:45:00.000Z",
+        "end": "2020-01-16T22:00:00.000Z",
+        "text": "Fishing with Daniel",
+        "color": "#de3d83"
+    },
+    {
+        "start": "2020-01-17T11:30:00.000Z",
+        "end": "2020-01-17T13:30:00.000Z",
+        "text": "Lunch @ Kitsune",
+        "color": "#f67944"
+    },
+    {
+        "start": "2020-01-17T14:30:00.000Z",
+        "end": "2020-01-17T17:30:00.000Z",
+        "text": "Walk in Kyoto National Park",
+        "color": "#de3d83"
+    },
+    {
+        "start": "2020-01-18T12:30:00.000Z",
+        "end": "2020-01-18T16:30:00.000Z",
+        "text": "Drivin Round Town",
+        "color": "#f67944"
+    },
+    {
+        "start": "2020-01-18T22:30:00.000Z",
+        "end": "2020-01-18T23:30:00.000Z",
+        "text": "Beers and Cheers",
+        "color": "#de3d83"
+    },
+    {
+        "start": "2020-01-19T11:30:00.000Z",
+        "end": "2020-01-19T12:30:00.000Z",
+        "text": "Check out",
+        "color": "#6e7f29"
+    },
+    {
+        "start": "2020-01-19T18:30:00.000Z",
+        "end": "2020-01-19T18:45:00.000Z",
+        "text": "Check out",
+        "color": "#f67944"
+    },
+    {
+        "start": "2020-01-21T10:00:00.000Z",
+        "end": "2020-01-21T10:30:00.000Z",
+        "text": "Stakeholder mtg.",
+        "color": "#f67944"
+    },
+    {
+        "start": "2020-01-21T12:00:00.000Z",
+        "end": "2020-01-21T12:30:00.000Z",
+        "text": "Lunch @ Butcher's",
+        "color": "#00aabb"
+    },
+    {
+        "start": "2020-01-22T14:00:00.000Z",
+        "end": "2020-01-22T15:00:00.000Z",
+        "text": "General orientation",
+        "color": "#de3d83"
+    }
+]
