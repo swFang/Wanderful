@@ -35,7 +35,7 @@ export default class LandingPage extends Component{
     }
 
     renderNavBar() {
-        let title = 'Landing Page';
+        let title = 'Home';
         if(this.state.Information) {
             title = 'Travel Advisory';
         } else if (this.state.Itinerary) {
