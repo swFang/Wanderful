@@ -8,6 +8,7 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import { CardContent } from '@material-ui/core';
 import ItinerarySplit from './itinerarySplit'
+import '../css/itinerary.css';
 
 class Itinerary extends Component {
     constructor(props) {
@@ -141,7 +142,7 @@ class Itinerary extends Component {
 
     render() {
         return (
-            <div>
+            <div className="itinerary">
                 <ItinerarySplit/>
                 {this.renderItinerary()}
                 <AppBar position="static" color="primary">
