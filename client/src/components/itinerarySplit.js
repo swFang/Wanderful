@@ -42,8 +42,7 @@ class ItinerarySplit extends Component {
 
     render() {
         return (
-            <div>
-                <Box borderColor="primary.main" borderRadius="50%">hello</Box>
+            <div className="moneyCard">
                 <Card>
                     <CardContent>
                         <Grid container spacing={2}>
