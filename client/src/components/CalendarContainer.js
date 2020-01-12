@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import mobiscroll from '@mobiscroll/react';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import itinerary from './itinerary.json';
+import './style.css';
 
 
 export class Calendar extends Component {
