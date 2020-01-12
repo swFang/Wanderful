@@ -3,8 +3,6 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PhoneIcon from '@material-ui/icons/Phone';
 import ContactsOutlinedIcon from '@material-ui/icons/ContactsOutlined';
 import ImportContactsOutlinedIcon from '@material-ui/icons/ImportContactsOutlined';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';

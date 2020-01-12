@@ -1,0 +1,65 @@
+{
+    "itinerary": [{
+    "category": "Food",
+    "events": [
+        {
+            "title": "Conveyor Belt Sushi",
+            "cost": 50,
+            "payer": "Alice",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Ramen",
+            "cost": 35,
+            "payer": "Alice",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Sashimi",
+            "cost": 60,
+            "payer": "Bob",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Wagyu Beef",
+            "cost": 250,
+            "payer": "Bob",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "7 Eleven",
+            "cost": 25,
+            "payer": "Bob",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+    }]
+}, {
+    "category": "Transportation",
+    "events": [
+        {
+            "title": "Taxi",
+            "cost": 50,
+            "payer": "Charlie",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Bullet Train",
+            "cost": 200,
+            "payer": "Bob",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Ride Share",
+            "cost": 100,
+            "payer": "Charlie",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+    }]
+}, {
+    "category": "Housing",
+    "events": [
+        {
+            "title": "AirBnb",
+            "cost": 200,
+            "payer": "Alice",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+        }, {
+            "title": "Capsule Hotel",
+            "cost": 10,
+            "payer": "Alice",
+            "location" : "1113 shinalishdofijaef prefecture, Tokyo"
+    }]
+}]
+}
