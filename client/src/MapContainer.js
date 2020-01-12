@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-import PersonMarker from './PersonMarker';
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import './Map.css';
 
 export class MapContainer extends Component {
@@ -16,12 +15,7 @@ export class MapContainer extends Component {
             lng: -123.2460
           }}
         >
-          <PersonMarker
-            lat={49.0000}
-            lng={-123.0000}
-            name="Elvin"
-            color="black"
-          />
+          <Marker position={{ lat: 49.27, lng: -123.23 }} />
         </Map>
       </div>
     );
