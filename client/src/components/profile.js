@@ -75,7 +75,6 @@ class Profile extends Component {
     render() {
         return (
             <div>
-                <span>hello there XD</span>
                 <Card>
                     <CardContent>
                         <Typography variant="h5" component="h2" align="left">
