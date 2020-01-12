@@ -27,7 +27,7 @@ export default class LandingPage extends Component{
     constructor(props) {
       super(props);
       this.state = {
-        Information: false,
+        Information: true,
         Itinerary: false, 
         Cost: false,
         FindMyBuddy: false

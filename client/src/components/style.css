@@ -3,6 +3,11 @@
     text-align: left;
     max-width: calc(100%-50px);
 }
+.blueTitle {
+    color: #008EFF;
+    text-align: left;
+    max-width: calc(100%-50px);
+}
 
 .mbsc-comp {
     width: 100%;
@@ -98,4 +103,40 @@ p {
 
 ok.MuiPaper-rounded {
     border: 2px solid #FF624D !important;
+}
+
+.health-advisory.MuiPaper-rounded {
+    border: 2px solid #008EFF ;
+}
+
+.health-advisory {
+    max-width: 70%;
+    margin-left: 10vw;
+    padding-left: 35px;
+    margin-top: 30px;
+}
+
+.jpflag {
+    height: 100px;
+    width: 100px;
+}
+
+.Advisory-country {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 115px;
+    border-bottom: 2px solid #008EFF;
+}
+
+.advisory-title {
+    color: #008EFF;
+}
+
+.horizontal-space {
+    width: 30px;
+}
+.spacer {
+    height: 30px;
 }
