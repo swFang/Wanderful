@@ -14,7 +14,7 @@
   top: 50%;
   margin: -20px 0 0 -20px;
 }
-.pin:after {
+/* .pin:after {
   content: "";
   width: 14px;
   height: 14px;
@@ -22,4 +22,4 @@
   background: #e6e6e6;
   position: absolute;
   border-radius: 50%;
-}
+} */
