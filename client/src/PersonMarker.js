@@ -4,7 +4,7 @@ import './Map.css';
 export class PersonMarker extends Component {
     render() {
         return (
-            <div className="personMarker"
+            <div className="pin"
                 style={{ backgroundColor: this.props.color, cursor: 'pointer' }}
                 title={this.props.name}
             />
