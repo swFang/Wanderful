@@ -1,5 +1,7 @@
 const express = require('express');
 const getAdvisoryData = require('../utils/getAdvisoryData');
+const japanAdvisoryData = require('../mockData/mockItineraryInfo.json');
+// const defaultAdvisoryData = require('');
 
 module.exports = (app) => {
     app.get('/', (req,res) => {
@@ -17,7 +19,11 @@ module.exports = (app) => {
         });
     });
 
-    app.get('/p/:tagId', function(req, res) {
-        res.send("tagId is set to " + req.params.tagId);
-      });
+    app.get('/getItinerary/:country', function(req, res) {
+        if(req.params.country == 'japan') {
+            res.send(japanAdvisoryData);
+        } else {
+            res.send({});
+        }
+    });
 };
