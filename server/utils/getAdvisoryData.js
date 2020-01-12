@@ -5,12 +5,12 @@ const countryCodeAPI = "https://restcountries.eu/rest/v2/name/";
 async function getAdvisoryData(location) { 
     let countryData;
     let res = await getCountryCode(location).then((res) => countryData = advisoryData.data[res]);
-    console.log(countryData);
     if(countryData && (countryData['has-advisory-warning'] || countryData['has-regional-advisory'])) {
         return countryData.eng['advisory-text']; 
     } else  {
         return 'nothing to worry about';
     }
+
 }
 
 async function getCountryCode(location) {

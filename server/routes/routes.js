@@ -11,6 +11,6 @@ module.exports = (app) => {
     app.post('/travelAdvisory', async (req, res) => {
         const advisory = await getAdvisoryData(req.body.location).then ((result) => {
             res.send(result);
-        })
+        });
     });
 };
