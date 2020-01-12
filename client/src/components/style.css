@@ -1,0 +1,36 @@
+.redTitle {
+    color: #FF624D;
+    text-align: left;
+}
+
+.advisory {
+    width: 50%;
+    margin-left: 25%;
+    padding-left: 50px;
+}
+
+.learnMore {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.h3 {
+    text-decoration: underline;
+}
+
+.left {
+    text-align: left;
+}
+
+.icon { 
+    width: 30px;
+    height: 30px;
+    display: inline;
+    float: left;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.MuiPaper-rounded {
+    border: 2px solid #FF624D !important;
+}
