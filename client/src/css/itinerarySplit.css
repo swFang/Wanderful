@@ -1,3 +1,31 @@
-.card {
-	border-radius: 50px;
+.moneyCard {
+	padding: 5%;
+	margin-bottom: 5%;
+}
+.moneyCard .MuiPaper-root.MuiCard-root.MuiPaper-elevation1.MuiPaper-rounded {
+	border: solid;
+	border-color: #008EFF;
+}
+
+.moneyCard .MuiTypography-root.MuiTypography-h5.MuiTypography-alignLeft {
+	color: #008EFF;
+	font-weight: bold;
+}
+
+.categories {
+	padding: 0%;
+	margin-bottom: 5%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.moneyCard .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+	background-color: #008EFF;
+}
+
+.totalBar .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+	position: fixed;
+	top: auto;
+	bottom: 0;
+	width: 100%;
 }

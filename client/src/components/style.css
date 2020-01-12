@@ -95,3 +95,7 @@ p {
 .Nav-text {
     margin-left: 25px;
 }
+
+ok.MuiPaper-rounded {
+    border: 2px solid #FF624D !important;
+}

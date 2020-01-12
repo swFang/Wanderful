@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import './Map.css';
+import gina from '../img/Gina.png';
+import holt from '../img/Holt.png';
+import jake from '../img/Jake.png';
+import you from '../img/you.png';
+
+
+
 
 export class MapContainer extends Component {
   render() {
@@ -8,14 +15,25 @@ export class MapContainer extends Component {
       <div className="mapContainer">
         <Map
           google={this.props.google}
-          zoom={13}
+          zoom={15}
           styles={mapStyles}
           initialCenter={{
-            lat: 49.2606,
-            lng: -123.2460
+            lat: 49.263,
+            lng: -123.245
           }}
         >
-          <Marker position={{ lat: 49.27, lng: -123.23 }} />
+          <Marker 
+          position={{ lat: 49.260, lng: -123.240 }}
+          icon={gina} title="Gina" />
+          <Marker 
+          position={{ lat: 49.261, lng: -123.238 }}
+          icon={jake} title="Jake" />
+          <Marker 
+          position={{ lat: 49.266, lng: -123.241 }}
+          icon={holt} title="Holt" />
+          <Marker 
+          position={{ lat: 49.263, lng: -123.245 }}
+          icon={you} />
         </Map>
       </div>
     );
